@@ -1,0 +1,17 @@
+[
+
+{
+"Order" : "50",
+"Body"	: "Write down the most useful use cases of the command line" 
+},
+
+{
+"Order" : "60",
+"Body"	: "Move classes relevant to the command line to another poject"
+},
+
+{
+"Order" : "100",
+"Body"	: "Run the Extractor app"
+}
+]

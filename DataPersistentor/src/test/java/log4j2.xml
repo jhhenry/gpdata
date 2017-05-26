@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration status="WARN"><Appenders>
+    <Console name="Console" target="SYSTEM_OUT">
+      <PatternLayout pattern="%d{HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n"/>
+    </Console>
+    <RollingRandomAccessFile name="log" fileName="d:/logs/test-persistent.log"  filePattern="d:/logs/test-persistent-%d{yyyy-MM-dd}.log" append="true">
+      <PatternLayout pattern="%d{HH:mm:ss.SSS} %-5level %class{36} %L %M - %msg%xEx%n"/>
+      <Policies>
+			    <!-- Roll daily and on start up. -->
+				<OnStartupTriggeringPolicy />
+				<TimeBasedTriggeringPolicy interval="1"
+					modulate="true" />
+			</Policies>
+    </RollingRandomAccessFile>
+    <RollingRandomAccessFile name="log_Daily" fileName="d:/logs/test-daily.log" filePattern="d:/logs/test-daily-%d{yyyy-MM-dd}.log" append="false">
+      <PatternLayout pattern="%d{HH:mm:ss.SSS} %-5level %class{36} %L %M - %msg%xEx%n"/>
+      <Policies>
+			    <!-- Roll daily and on start up. -->
+				<OnStartupTriggeringPolicy />
+				<TimeBasedTriggeringPolicy interval="1"
+					modulate="true" />
+			</Policies>
+    </RollingRandomAccessFile>
+    <RollingRandomAccessFile name="daily-select" fileName="d:/logs/daily-select.log"  filePattern="d:/logs/daily-select-%d{yyyy-MM-dd}.log" append="true">
+      <PatternLayout pattern="%d{HH:mm:ss.SSS} %-5level %class{36} %L %M - %msg%xEx%n"/>
+      <Policies>
+			    <!-- Roll daily and on start up. -->
+				<OnStartupTriggeringPolicy />
+				<TimeBasedTriggeringPolicy interval="1"
+					modulate="true" />
+			</Policies>
+    </RollingRandomAccessFile>
+  </Appenders>
+  <Loggers>
+    <Logger name="dailyRun" level="trace">
+      <AppenderRef ref="log_Daily"/>
+    </Logger>
+    <Logger name="dailySelect" level="info">
+      <AppenderRef ref="daily-select"/>
+    </Logger>
+    <Logger name="henry" level="trace" additivity="false">
+      <AppenderRef ref="log"/>
+      <AppenderRef ref="Console"/>
+    </Logger>
+    <Root level="trace">
+      <AppenderRef ref="Console"/>
+    </Root>
+  </Loggers>
+</Configuration>

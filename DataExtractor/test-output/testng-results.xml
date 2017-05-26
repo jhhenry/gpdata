@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" total="2" passed="2">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="793" started-at="2017-05-09T07:57:07Z" finished-at="2017-05-09T07:57:08Z">
+    <groups>
+    </groups>
+    <test name="Default test" duration-ms="793" started-at="2017-05-09T07:57:07Z" finished-at="2017-05-09T07:57:08Z">
+      <class name="henry.html.extractor.WeeklyQuoteFromSohuTest">
+        <test-method status="PASS" signature="test()[pri:0, instance:henry.html.extractor.WeeklyQuoteFromSohuTest@32d992b2]" name="test" duration-ms="730" started-at="2017-05-09T15:57:07Z" finished-at="2017-05-09T15:57:08Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- test -->
+        <test-method status="PASS" signature="testCaptureString()[pri:0, instance:henry.html.extractor.WeeklyQuoteFromSohuTest@32d992b2]" name="testCaptureString" duration-ms="49" started-at="2017-05-09T15:57:08Z" finished-at="2017-05-09T15:57:08Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testCaptureString -->
+      </class> <!-- henry.html.extractor.WeeklyQuoteFromSohuTest -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>

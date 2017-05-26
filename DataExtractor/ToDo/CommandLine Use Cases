@@ -1,0 +1,13 @@
+>>> Get the daily quotes <<<
+-daily [dates]
+If [dates] not specified, today is used.
+"dates" format: -date [date2[,date2]...]
+"dates" format: -date [date1~date2[,date3~date4]...]
+
+
+>>> Add new stocks <<<
+add newly-published stocks
+
+
+>>> Report recommended stocks <<<
+report

@@ -1,0 +1,707 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>历史分价表_大单成交_新浪财经_新浪网</title>
+<meta name="keywords" content="">
+<meta name="description" content="">
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<script type="text/javascript" src="http://i3.sinaimg.cn/cj/HKstock2007/IO.Script_1_0_1.js"></script>
+<style type="text/css">
+	body {padding:0px; margin:0px;}
+	.main { margin:0px ;width:928px;}
+	
+	.main .divList table.list {border-collapse:collapse; width:928px;}
+	.main .divList table.list .up {color:#f00;}
+	.main .divList table.list .down {color:#008000;}
+	.main .divList table.list td, .main table.list th {border:1px solid #d7d7df; border-left:none; border-right:none; font-size:12px; font-weight:normal; height:22px; line-height:22px; padding:0px;}
+	.main .divList table.list td {padding-right:10px; text-align:right;}
+	.main .divList table.list th {padding-left:10px; text-align:left;}
+	.main .divList table.list tr.gray td, .main table.list tr.gray th {background-color:#f7f7f7;}
+	.main .divList table.list thead td, .main table.list thead th {background-color:#d4edff;}
+	.main .divList .chart {height:14px; padding:4px auto; width:500px;}
+	.main .divList .chart div {background-color:#666; height:14px;}
+	.main .divList .chart div.up {background-color:#f00;}
+	.main .divList .chart div.down {background-color:#008000;}
+	
+	.main .divList#divListError {color:#F00; font-size:12px; height:30px; line-height:30px; text-align:center;}
+</style>
+</head>
+
+<body>
+<script language="javascript">
+document.domain = "finance.sina.com.cn";
+var SetHeightTimeObj = setInterval("window.frameElement.height = document.body.scrollHeight",50);
+window.onload = function(){clearInterval(SetHeightTimeObj);window.frameElement.height = document.body.scrollHeight;}
+</script>
+<div class="main">
+		<div id="divListTemplate" class="divList">
+		<table class="list" id="datalist">
+			<thead>
+				<tr>
+					<td>成交价(元)</td>
+					<td>成交量(股)</td>
+					<td>占比</td>
+					<th>占比图</th>
+				</tr>
+			</thead>
+			<tbody>
+											<tr class="gray">
+								<td>9.33</td>
+								<td>50520</td>
+								<td>0.05%</td>
+								<th class="chart"><div id="histogram9330" style="width:4px;"></div></th>
+							</tr>
+														<tr class="">
+								<td>9.32</td>
+								<td>136500</td>
+								<td>0.12%</td>
+								<th class="chart"><div id="histogram9320" style="width:11px;"></div></th>
+							</tr>
+														<tr class="gray">
+								<td>9.31</td>
+								<td>92300</td>
+								<td>0.08%</td>
+								<th class="chart"><div id="histogram9310" style="width:8px;"></div></th>
+							</tr>
+														<tr class="">
+								<td>9.30</td>
+								<td>928820</td>
+								<td>0.85%</td>
+								<th class="chart"><div id="histogram9300" style="width:81px;"></div></th>
+							</tr>
+														<tr class="gray">
+								<td>9.29</td>
+								<td>264925</td>
+								<td>0.24%</td>
+								<th class="chart"><div id="histogram9290" style="width:23px;"></div></th>
+							</tr>
+														<tr class="">
+								<td>9.28</td>
+								<td>202820</td>
+								<td>0.19%</td>
+								<th class="chart"><div id="histogram9280" style="width:17px;"></div></th>
+							</tr>
+														<tr class="gray">
+								<td>9.27</td>
+								<td>230570</td>
+								<td>0.21%</td>
+								<th class="chart"><div id="histogram9270" style="width:20px;"></div></th>
+							</tr>
+														<tr class="">
+								<td>9.26</td>
+								<td>375770</td>
+								<td>0.34%</td>
+								<th class="chart"><div id="histogram9260" style="width:32px;"></div></th>
+							</tr>
+														<tr class="gray">
+								<td>9.25</td>
+								<td>280585</td>
+								<td>0.26%</td>
+								<th class="chart"><div id="histogram9250" style="width:24px;"></div></th>
+							</tr>
+														<tr class="">
+								<td>9.24</td>
+								<td>894209</td>
+								<td>0.82%</td>
+								<th class="chart"><div id="histogram9240" style="width:78px;"></div></th>
+							</tr>
+														<tr class="gray">
+								<td>9.23</td>
+								<td>528124</td>
+								<td>0.48%</td>
+								<th class="chart"><div id="histogram9230" style="width:46px;"></div></th>
+							</tr>
+														<tr class="">
+								<td>9.22</td>
+								<td>542618</td>
+								<td>0.50%</td>
+								<th class="chart"><div id="histogram9220" style="width:47px;"></div></th>
+							</tr>
+														<tr class="gray">
+								<td>9.21</td>
+								<td>359908</td>
+								<td>0.33%</td>
+								<th class="chart"><div id="histogram9210" style="width:31px;"></div></th>
+							</tr>
+														<tr class="">
+								<td>9.20</td>
+								<td>518400</td>
+								<td>0.47%</td>
+								<th class="chart"><div id="histogram9200" style="width:45px;"></div></th>
+							</tr>
+														<tr class="gray">
+								<td>9.19</td>
+								<td>796360</td>
+								<td>0.73%</td>
+								<th class="chart"><div id="histogram9190" style="width:69px;"></div></th>
+							</tr>
+														<tr class="">
+								<td>9.18</td>
+								<td>433020</td>
+								<td>0.40%</td>
+								<th class="chart"><div id="histogram9180" style="width:38px;"></div></th>
+							</tr>
+														<tr class="gray">
+								<td>9.17</td>
+								<td>294381</td>
+								<td>0.27%</td>
+								<th class="chart"><div id="histogram9170" style="width:25px;"></div></th>
+							</tr>
+														<tr class="">
+								<td>9.16</td>
+								<td>624713</td>
+								<td>0.57%</td>
+								<th class="chart"><div id="histogram9160" style="width:54px;"></div></th>
+							</tr>
+														<tr class="gray">
+								<td>9.15</td>
+								<td>1432554</td>
+								<td>1.31%</td>
+								<th class="chart"><div id="histogram9150" style="width:125px;"></div></th>
+							</tr>
+														<tr class="">
+								<td>9.14</td>
+								<td>1077222</td>
+								<td>0.98%</td>
+								<th class="chart"><div id="histogram9140" style="width:94px;"></div></th>
+							</tr>
+														<tr class="gray">
+								<td>9.13</td>
+								<td>1288140</td>
+								<td>1.18%</td>
+								<th class="chart"><div id="histogram9130" style="width:113px;"></div></th>
+							</tr>
+														<tr class="">
+								<td>9.12</td>
+								<td>1628221</td>
+								<td>1.49%</td>
+								<th class="chart"><div id="histogram9120" style="width:142px;"></div></th>
+							</tr>
+														<tr class="gray">
+								<td>9.11</td>
+								<td>1471992</td>
+								<td>1.34%</td>
+								<th class="chart"><div id="histogram9110" style="width:129px;"></div></th>
+							</tr>
+														<tr class="">
+								<td>9.10</td>
+								<td>3926056</td>
+								<td>3.58%</td>
+								<th class="chart"><div id="histogram9100" style="width:344px;"></div></th>
+							</tr>
+														<tr class="gray">
+								<td>9.09</td>
+								<td>2628948</td>
+								<td>2.40%</td>
+								<th class="chart"><div id="histogram9090" style="width:230px;"></div></th>
+							</tr>
+														<tr class="">
+								<td>9.08</td>
+								<td>2852412</td>
+								<td>2.60%</td>
+								<th class="chart"><div id="histogram9080" style="width:250px;"></div></th>
+							</tr>
+														<tr class="gray">
+								<td>9.07</td>
+								<td>1228980</td>
+								<td>1.12%</td>
+								<th class="chart"><div id="histogram9070" style="width:107px;"></div></th>
+							</tr>
+														<tr class="">
+								<td>9.06</td>
+								<td>1620824</td>
+								<td>1.48%</td>
+								<th class="chart"><div id="histogram9060" style="width:142px;"></div></th>
+							</tr>
+														<tr class="gray">
+								<td>9.05</td>
+								<td>1890016</td>
+								<td>1.73%</td>
+								<th class="chart"><div id="histogram9050" style="width:165px;"></div></th>
+							</tr>
+														<tr class="">
+								<td>9.04</td>
+								<td>1329754</td>
+								<td>1.21%</td>
+								<th class="chart"><div id="histogram9040" style="width:116px;"></div></th>
+							</tr>
+														<tr class="gray">
+								<td>9.03</td>
+								<td>1624749</td>
+								<td>1.48%</td>
+								<th class="chart"><div id="histogram9030" style="width:142px;"></div></th>
+							</tr>
+														<tr class="">
+								<td>9.02</td>
+								<td>979390</td>
+								<td>0.89%</td>
+								<th class="chart"><div id="histogram9020" style="width:85px;"></div></th>
+							</tr>
+														<tr class="gray">
+								<td>9.01</td>
+								<td>1292139</td>
+								<td>1.18%</td>
+								<th class="chart"><div id="histogram9010" style="width:113px;"></div></th>
+							</tr>
+														<tr class="">
+								<td>9.00</td>
+								<td>4364378</td>
+								<td>3.98%</td>
+								<th class="chart"><div id="histogram9000" style="width:383px;"></div></th>
+							</tr>
+														<tr class="gray">
+								<td>8.99</td>
+								<td>1220212</td>
+								<td>1.11%</td>
+								<th class="chart"><div id="histogram8990" style="width:107px;"></div></th>
+							</tr>
+														<tr class="">
+								<td>8.98</td>
+								<td>1809788</td>
+								<td>1.65%</td>
+								<th class="chart"><div id="histogram8980" style="width:158px;"></div></th>
+							</tr>
+														<tr class="gray">
+								<td>8.97</td>
+								<td>491288</td>
+								<td>0.45%</td>
+								<th class="chart"><div id="histogram8970" style="width:43px;"></div></th>
+							</tr>
+														<tr class="">
+								<td>8.96</td>
+								<td>1197954</td>
+								<td>1.09%</td>
+								<th class="chart"><div id="histogram8960" style="width:105px;"></div></th>
+							</tr>
+														<tr class="gray">
+								<td>8.95</td>
+								<td>1242616</td>
+								<td>1.13%</td>
+								<th class="chart"><div id="histogram8950" style="width:109px;"></div></th>
+							</tr>
+														<tr class="">
+								<td>8.94</td>
+								<td>535852</td>
+								<td>0.49%</td>
+								<th class="chart"><div id="histogram8940" style="width:47px;"></div></th>
+							</tr>
+														<tr class="gray">
+								<td>8.93</td>
+								<td>1106806</td>
+								<td>1.01%</td>
+								<th class="chart"><div id="histogram8930" style="width:97px;"></div></th>
+							</tr>
+														<tr class="">
+								<td>8.92</td>
+								<td>597677</td>
+								<td>0.55%</td>
+								<th class="chart"><div id="histogram8920" style="width:52px;"></div></th>
+							</tr>
+														<tr class="gray">
+								<td>8.91</td>
+								<td>371890</td>
+								<td>0.34%</td>
+								<th class="chart"><div id="histogram8910" style="width:32px;"></div></th>
+							</tr>
+														<tr class="">
+								<td>8.90</td>
+								<td>1998944</td>
+								<td>1.83%</td>
+								<th class="chart"><div id="histogram8900" style="width:175px;"></div></th>
+							</tr>
+														<tr class="gray">
+								<td>8.89</td>
+								<td>683745</td>
+								<td>0.62%</td>
+								<th class="chart"><div id="histogram8890" style="width:60px;"></div></th>
+							</tr>
+														<tr class="">
+								<td>8.88</td>
+								<td>1167454</td>
+								<td>1.07%</td>
+								<th class="chart"><div id="histogram8880" style="width:102px;"></div></th>
+							</tr>
+														<tr class="gray">
+								<td>8.87</td>
+								<td>1264593</td>
+								<td>1.15%</td>
+								<th class="chart"><div id="histogram8870" style="width:110px;"></div></th>
+							</tr>
+														<tr class="">
+								<td>8.86</td>
+								<td>1594579</td>
+								<td>1.46%</td>
+								<th class="chart"><div id="histogram8860" style="width:139px;"></div></th>
+							</tr>
+														<tr class="gray">
+								<td>8.85</td>
+								<td>2228067</td>
+								<td>2.03%</td>
+								<th class="chart"><div id="histogram8850" style="width:195px;"></div></th>
+							</tr>
+														<tr class="">
+								<td>8.84</td>
+								<td>1494879</td>
+								<td>1.36%</td>
+								<th class="chart"><div id="histogram8840" style="width:131px;"></div></th>
+							</tr>
+														<tr class="gray">
+								<td>8.83</td>
+								<td>2353168</td>
+								<td>2.15%</td>
+								<th class="chart"><div id="histogram8830" style="width:206px;"></div></th>
+							</tr>
+														<tr class="">
+								<td>8.82</td>
+								<td>1540741</td>
+								<td>1.41%</td>
+								<th class="chart"><div id="histogram8820" style="width:135px;"></div></th>
+							</tr>
+														<tr class="gray">
+								<td>8.81</td>
+								<td>1315120</td>
+								<td>1.20%</td>
+								<th class="chart"><div id="histogram8810" style="width:115px;"></div></th>
+							</tr>
+														<tr class="">
+								<td>8.80</td>
+								<td>5469083</td>
+								<td>4.99%</td>
+								<th class="chart"><div id="histogram8800" style="width:480px;"></div></th>
+							</tr>
+														<tr class="gray">
+								<td>8.79</td>
+								<td>1738021</td>
+								<td>1.59%</td>
+								<th class="chart"><div id="histogram8790" style="width:152px;"></div></th>
+							</tr>
+														<tr class="">
+								<td>8.78</td>
+								<td>1432282</td>
+								<td>1.31%</td>
+								<th class="chart"><div id="histogram8780" style="width:125px;"></div></th>
+							</tr>
+														<tr class="gray">
+								<td>8.77</td>
+								<td>998643</td>
+								<td>0.91%</td>
+								<th class="chart"><div id="histogram8770" style="width:87px;"></div></th>
+							</tr>
+														<tr class="">
+								<td>8.76</td>
+								<td>1085508</td>
+								<td>0.99%</td>
+								<th class="chart"><div id="histogram8760" style="width:95px;"></div></th>
+							</tr>
+														<tr class="gray">
+								<td>8.75</td>
+								<td>1588318</td>
+								<td>1.45%</td>
+								<th class="chart"><div id="histogram8750" style="width:139px;"></div></th>
+							</tr>
+														<tr class="">
+								<td>8.74</td>
+								<td>1751346</td>
+								<td>1.60%</td>
+								<th class="chart"><div id="histogram8740" style="width:153px;"></div></th>
+							</tr>
+														<tr class="gray">
+								<td>8.73</td>
+								<td>825611</td>
+								<td>0.75%</td>
+								<th class="chart"><div id="histogram8730" style="width:72px;"></div></th>
+							</tr>
+														<tr class="">
+								<td>8.72</td>
+								<td>1046281</td>
+								<td>0.96%</td>
+								<th class="chart"><div id="histogram8720" style="width:91px;"></div></th>
+							</tr>
+														<tr class="gray">
+								<td>8.71</td>
+								<td>1152893</td>
+								<td>1.05%</td>
+								<th class="chart"><div id="histogram8710" style="width:101px;"></div></th>
+							</tr>
+														<tr class="">
+								<td>8.70</td>
+								<td>2757973</td>
+								<td>2.52%</td>
+								<th class="chart"><div id="histogram8700" style="width:242px;"></div></th>
+							</tr>
+														<tr class="gray">
+								<td>8.69</td>
+								<td>648674</td>
+								<td>0.59%</td>
+								<th class="chart"><div id="histogram8690" style="width:56px;"></div></th>
+							</tr>
+														<tr class="">
+								<td>8.68</td>
+								<td>1422982</td>
+								<td>1.30%</td>
+								<th class="chart"><div id="histogram8680" style="width:124px;"></div></th>
+							</tr>
+														<tr class="gray">
+								<td>8.67</td>
+								<td>936009</td>
+								<td>0.85%</td>
+								<th class="chart"><div id="histogram8670" style="width:82px;"></div></th>
+							</tr>
+														<tr class="">
+								<td>8.66</td>
+								<td>1996593</td>
+								<td>1.82%</td>
+								<th class="chart"><div id="histogram8660" style="width:175px;"></div></th>
+							</tr>
+														<tr class="gray">
+								<td>8.65</td>
+								<td>1395340</td>
+								<td>1.27%</td>
+								<th class="chart"><div id="histogram8650" style="width:122px;"></div></th>
+							</tr>
+														<tr class="">
+								<td>8.64</td>
+								<td>691308</td>
+								<td>0.63%</td>
+								<th class="chart"><div id="histogram8640" style="width:60px;"></div></th>
+							</tr>
+														<tr class="gray">
+								<td>8.63</td>
+								<td>394488</td>
+								<td>0.36%</td>
+								<th class="chart"><div id="histogram8630" style="width:34px;"></div></th>
+							</tr>
+														<tr class="">
+								<td>8.62</td>
+								<td>807094</td>
+								<td>0.74%</td>
+								<th class="chart"><div id="histogram8620" style="width:70px;"></div></th>
+							</tr>
+														<tr class="gray">
+								<td>8.61</td>
+								<td>764884</td>
+								<td>0.70%</td>
+								<th class="chart"><div id="histogram8610" style="width:67px;"></div></th>
+							</tr>
+														<tr class="">
+								<td>8.60</td>
+								<td>907090</td>
+								<td>0.83%</td>
+								<th class="chart"><div id="histogram8600" style="width:79px;"></div></th>
+							</tr>
+														<tr class="gray">
+								<td>8.59</td>
+								<td>970119</td>
+								<td>0.89%</td>
+								<th class="chart"><div id="histogram8590" style="width:85px;"></div></th>
+							</tr>
+														<tr class="">
+								<td>8.58</td>
+								<td>714889</td>
+								<td>0.65%</td>
+								<th class="chart"><div id="histogram8580" style="width:62px;"></div></th>
+							</tr>
+														<tr class="gray">
+								<td>8.57</td>
+								<td>716817</td>
+								<td>0.65%</td>
+								<th class="chart"><div id="histogram8570" style="width:62px;"></div></th>
+							</tr>
+														<tr class="">
+								<td>8.56</td>
+								<td>555428</td>
+								<td>0.51%</td>
+								<th class="chart"><div id="histogram8560" style="width:48px;"></div></th>
+							</tr>
+														<tr class="gray">
+								<td>8.55</td>
+								<td>987277</td>
+								<td>0.90%</td>
+								<th class="chart"><div id="histogram8550" style="width:86px;"></div></th>
+							</tr>
+														<tr class="">
+								<td>8.54</td>
+								<td>307863</td>
+								<td>0.28%</td>
+								<th class="chart"><div id="histogram8540" style="width:27px;"></div></th>
+							</tr>
+														<tr class="gray">
+								<td>8.53</td>
+								<td>536110</td>
+								<td>0.49%</td>
+								<th class="chart"><div id="histogram8530" style="width:47px;"></div></th>
+							</tr>
+														<tr class="">
+								<td>8.52</td>
+								<td>210523</td>
+								<td>0.19%</td>
+								<th class="chart"><div id="histogram8520" style="width:18px;"></div></th>
+							</tr>
+														<tr class="gray">
+								<td>8.51</td>
+								<td>419152</td>
+								<td>0.38%</td>
+								<th class="chart"><div id="histogram8510" style="width:36px;"></div></th>
+							</tr>
+														<tr class="">
+								<td>8.50</td>
+								<td>337800</td>
+								<td>0.31%</td>
+								<th class="chart"><div id="histogram8500" style="width:29px;"></div></th>
+							</tr>
+														<tr class="gray">
+								<td>8.49</td>
+								<td>342100</td>
+								<td>0.31%</td>
+								<th class="chart"><div id="histogram8490" style="width:30px;"></div></th>
+							</tr>
+														<tr class="">
+								<td>8.48</td>
+								<td>217560</td>
+								<td>0.20%</td>
+								<th class="chart"><div id="histogram8480" style="width:19px;"></div></th>
+							</tr>
+														<tr class="gray">
+								<td>8.47</td>
+								<td>58500</td>
+								<td>0.05%</td>
+								<th class="chart"><div id="histogram8470" style="width:5px;"></div></th>
+							</tr>
+														<tr class="">
+								<td>8.46</td>
+								<td>78842</td>
+								<td>0.07%</td>
+								<th class="chart"><div id="histogram8460" style="width:6px;"></div></th>
+							</tr>
+														<tr class="gray">
+								<td>8.45</td>
+								<td>373161</td>
+								<td>0.34%</td>
+								<th class="chart"><div id="histogram8450" style="width:32px;"></div></th>
+							</tr>
+														<tr class="">
+								<td>8.44</td>
+								<td>184139</td>
+								<td>0.17%</td>
+								<th class="chart"><div id="histogram8440" style="width:16px;"></div></th>
+							</tr>
+														<tr class="gray">
+								<td>8.43</td>
+								<td>234120</td>
+								<td>0.21%</td>
+								<th class="chart"><div id="histogram8430" style="width:20px;"></div></th>
+							</tr>
+														<tr class="">
+								<td>8.42</td>
+								<td>102500</td>
+								<td>0.09%</td>
+								<th class="chart"><div id="histogram8420" style="width:8px;"></div></th>
+							</tr>
+														<tr class="gray">
+								<td>8.41</td>
+								<td>94530</td>
+								<td>0.09%</td>
+								<th class="chart"><div id="histogram8410" style="width:8px;"></div></th>
+							</tr>
+														<tr class="">
+								<td>8.40</td>
+								<td>592530</td>
+								<td>0.54%</td>
+								<th class="chart"><div id="histogram8400" style="width:52px;"></div></th>
+							</tr>
+														<tr class="gray">
+								<td>8.39</td>
+								<td>661919</td>
+								<td>0.60%</td>
+								<th class="chart"><div id="histogram8390" style="width:58px;"></div></th>
+							</tr>
+														<tr class="">
+								<td>8.38</td>
+								<td>790279</td>
+								<td>0.72%</td>
+								<th class="chart"><div id="histogram8380" style="width:69px;"></div></th>
+							</tr>
+														<tr class="gray">
+								<td>8.37</td>
+								<td>1975707</td>
+								<td>1.80%</td>
+								<th class="chart"><div id="histogram8370" style="width:173px;"></div></th>
+							</tr>
+														<tr class="">
+								<td>8.36</td>
+								<td>2374464</td>
+								<td>2.17%</td>
+								<th class="chart"><div id="histogram8360" style="width:208px;"></div></th>
+							</tr>
+														<tr class="gray">
+								<td>8.35</td>
+								<td>1699337</td>
+								<td>1.55%</td>
+								<th class="chart"><div id="histogram8350" style="width:149px;"></div></th>
+							</tr>
+														<tr class="">
+								<td>8.34</td>
+								<td>818919</td>
+								<td>0.75%</td>
+								<th class="chart"><div id="histogram8340" style="width:71px;"></div></th>
+							</tr>
+														<tr class="gray">
+								<td>8.33</td>
+								<td>586968</td>
+								<td>0.54%</td>
+								<th class="chart"><div id="histogram8330" style="width:51px;"></div></th>
+							</tr>
+														<tr class="">
+								<td>8.32</td>
+								<td>348149</td>
+								<td>0.32%</td>
+								<th class="chart"><div id="histogram8320" style="width:30px;"></div></th>
+							</tr>
+														<tr class="gray">
+								<td>8.31</td>
+								<td>19400</td>
+								<td>0.02%</td>
+								<th class="chart"><div id="histogram8310" style="width:1px;"></div></th>
+							</tr>
+										</tbody>
+		</table>
+	</div>
+	</div>
+<script language="javascript">
+var symbol = "sh600651";
+if(typeof $=="undefined"){$=function(A){return document.getElementById(A)}}
+function getChildren(node){
+	children = node.childNodes;
+	var result = [];
+	for(i = 0 ; i < children.length ; i++){
+		if(children[i].nodetype != 3){
+			result.push(children[i]);
+		}
+	}
+	return result;
+}
+var ColorPainter = function(){
+	function paint(){
+		var lastClose = window['hq_str_'+symbol].split(',')[2];
+		if($("datalist")){
+			var allRows = $("datalist").tBodies[0].rows;
+			for(i=0;i < allRows.length ; i++){
+				row = allRows[i];
+				tds = row.cells;	
+				price = tds[0].innerHTML;
+				//$("histogram" + (price.toFixed(2) * 1000)).className =  price > lastClose ? "up" : "down" ;
+				tds[3].childNodes[0].className =  price > lastClose ? "up" : (price == lastClose ? "" : "down") ;
+			}
+		}
+	}
+	return function(){
+		var url = "http://hq.sinajs.cn/list="+symbol;
+		var sl = new IO.Script();
+		sl.load(url , paint);
+	}
+}();
+ColorPainter();
+</script>
+</body>
+</html>

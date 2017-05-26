@@ -1,0 +1,11 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="PersistenceService" verbose="1" >
+  <test name="relationalDB" >
+    <classes>
+       <class name="henry.persistent.BasicDailyQuoteTest" />
+       <class name="henry.persistent.BasicWeeklyQuoteServiceTest" />
+       <class name="henry.persistent.DayPriceVolTest"	/>
+    </classes>
+  </test>
+ 
+</suite>

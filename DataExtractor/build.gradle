@@ -1,0 +1,40 @@
+apply plugin: 'java'
+apply plugin: 'eclipse'
+
+sourceCompatibility = 1.7
+version = '1.0'
+jar {
+    manifest {
+        attributes 'Implementation-Title': 'DataExtractor', 'Implementation-Version': version
+    }
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+	compile project(':DataCommons')
+	compile project(':DataModel')
+	compile group: 'org.htmlparser', name: 'htmlparser', version: '2.1'
+	compile group: 'org.antlr', name: 'stringtemplate', version: '4.0.2'
+    compile group: 'commons-collections', name: 'commons-collections', version: '3.2'
+    compile group: 'com.google.guava', name: 'guava', version: '18.0'
+	compile group: 'org.apache.logging.log4j', name: 'log4j-core', version: '2.+'
+	compile group: 'joda-time', name: 'joda-time', version: '2.5'
+	
+	testCompile group: 'junit', name: 'junit', version: '4.12'
+	testCompile group: 'org.testng', name: 'testng', version: '6.8.8'
+}
+
+test {
+    systemProperties 'property': 'value'
+}
+
+uploadArchives {
+    repositories {
+       flatDir {
+           dirs 'repos'
+       }
+    }
+}

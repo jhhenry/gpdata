@@ -1,0 +1,4 @@
+#org.springsource.ide.eclipse.gradle.core.preferences.GradleProjectPreferences
+#Sun Nov 20 20:01:16 CST 2016
+build.family.org.gradle.tooling.model.eclipse.HierarchicalEclipseProject=;../DataCommons;../DataExtractor;../DataPersistentor;
+org.springsource.ide.eclipse.gradle.rootprojectloc=

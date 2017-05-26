@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence version="2.1" xmlns="http://xmlns.jcp.org/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence http://xmlns.jcp.org/xml/ns/persistence/persistence_2_1.xsd">
+	<persistence-unit name="DayPriceVolService" transaction-type="RESOURCE_LOCAL">
+		<provider>org.eclipse.persistence.jpa.PersistenceProvider</provider>
+		<class>henry.persistent.DayPriceVol</class>
+		<class>henry.persistent.BasicDailyQuote</class>
+		<class>henry.persistent.BasicWeeklyQuote</class>
+		<properties>
+            <property name="eclipselink.ddl-generation" value="create-tables" />
+			<property name="javax.persistence.jdbc.driver" value="com.mysql.jdbc.Driver" />
+			<property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/stock" />
+			<property name="javax.persistence.jdbc.user" value="root" />
+			<property name="javax.persistence.jdbc.password" value="Oracle123" />
+			<property name="eclipselink.logging.level" value="WARNING" />
+        </properties>
+	</persistence-unit>
+	
+	<persistence-unit name="DayPriceVolServiceTest" transaction-type="RESOURCE_LOCAL">
+		<provider>org.eclipse.persistence.jpa.PersistenceProvider</provider>
+		<class>henry.persistent.DayPriceVol</class>
+		<class>henry.persistent.BasicDailyQuote</class>
+		<class>henry.persistent.BasicWeeklyQuote</class>
+		<properties>
+            <property name="eclipselink.ddl-generation" value="drop-and-create-tables" />
+			<property name="javax.persistence.jdbc.driver" value="com.mysql.jdbc.Driver" />
+			<property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/stockTest" />
+			<property name="javax.persistence.jdbc.user" value="root" />
+			<property name="javax.persistence.jdbc.password" value="Oracle123" />
+			<property name="eclipselink.logging.level" value="WARNING" />
+        </properties>
+	</persistence-unit>
+</persistence>
