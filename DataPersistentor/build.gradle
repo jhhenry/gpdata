@@ -25,6 +25,9 @@ dependencies {
 	compile group: 'org.eclipse.persistence', name: 'org.eclipse.persistence.jpa', version:'2.5.2'
 	compile group: 'mysql', name: 'mysql-connector-java', version: '5.1.33'
     compile group: 'com.google.guava', name: 'guava', version: '18.0'
+    compile group:'org.slf4j', name:'slf4j-api', version:'1.7.6'
+       
+    compile (group:'org.apache.logging.log4j', name:'log4j-slf4j-impl', version:'2.0.2') {transitive=false}
 	compile group: 'org.apache.logging.log4j', name: 'log4j-api', version: '2.7'
 	compile group: 'org.apache.logging.log4j', name: 'log4j-core', version: '2.7'
 	compile group: 'joda-time', name: 'joda-time', version: '2.5'
