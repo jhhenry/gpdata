@@ -1,13 +1,13 @@
 package henry.persistent;
 
+import java.time.LocalDate;
 import java.util.Date;
 import java.util.List;
 
 import javax.persistence.EntityManager;
 
-import org.joda.time.DateTime;
-
 import henry.commons.CalendarUtil;
+import henry.commons.DateUtils;
 
 public class BasicWeeklyQuoteService
 {
@@ -73,7 +73,7 @@ public class BasicWeeklyQuoteService
     		end = start;
     	} else if (start == null && end == null) {
     		start = CalendarUtil.getDate(1970, 1, 1);
-    		end = DateTime.now().plusYears(15).toDate();
+    		end = DateUtils.asDate(LocalDate.now().plusYears(15));
     	}
         em.createNamedQuery("BasicWeeklyQuote.deleteQuotesByStockAndDate", BasicWeeklyQuote.class).setParameter("stock", stock).setParameter("start", start).setParameter("end", end).executeUpdate();
     }

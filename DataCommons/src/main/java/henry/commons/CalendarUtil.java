@@ -63,7 +63,6 @@ public class CalendarUtil
     {
         start.add(Calendar.DAY_OF_MONTH, days);
         return start.getTime();
-
     }
 
     public static void main(String[] args) throws Exception

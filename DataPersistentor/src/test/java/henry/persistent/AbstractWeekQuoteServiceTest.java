@@ -1,15 +1,16 @@
 package henry.persistent;
 
+import java.time.LocalDate;
 import java.util.List;
 
 import javax.persistence.EntityManager;
 
-import org.joda.time.DateTime;
 import org.testng.Assert;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 
 import henry.commons.CalendarUtil;
+import henry.commons.DateUtils;
 
 public abstract class AbstractWeekQuoteServiceTest
 {
@@ -28,7 +29,7 @@ public abstract class AbstractWeekQuoteServiceTest
 		em.getTransaction().begin();
 		srv.deleteWeeklyQuotes(getStockID(), null, null);
 		em.getTransaction().commit();
-		List<BasicWeeklyQuote> records = srv.getBasicWeeklyQuotes(getStockID(), CalendarUtil.getDate(1970, 1, 1), DateTime.now().plusYears(15).toDate());
+		List<BasicWeeklyQuote> records = srv.getBasicWeeklyQuotes(getStockID(), CalendarUtil.getDate(1970, 1, 1), DateUtils.asDate(LocalDate.now().plusYears(15)));
 		Assert.assertEquals(records.size(), 0);
 	}
 

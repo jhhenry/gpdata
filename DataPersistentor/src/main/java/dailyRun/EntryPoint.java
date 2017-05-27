@@ -1,11 +1,11 @@
 package dailyRun;
 
-import henry.commons.CalendarUtil;
-
 import java.io.BufferedReader;
 import java.io.Console;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.time.DayOfWeek;
+import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Date;
@@ -20,7 +20,9 @@ import org.apache.commons.cli.ParseException;
 import org.apache.commons.cli.PosixParser;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-import org.joda.time.DateTime;
+
+import henry.commons.CalendarUtil;
+import henry.commons.DateUtils;
 
 public class EntryPoint
 {
@@ -137,18 +139,22 @@ public class EntryPoint
     			if (d.endsWith("~")) {
     				String startDate = d.substring(0, d.length() - 1).trim();
     				result.add(startDate);
-    				DateTime addedDate = new DateTime(CalendarUtil.getDashDate().parse(d));
-    				while (addedDate != null && addedDate.isBeforeNow()) {
-    					if (addedDate.getDayOfWeek() <= 5) {
-    						specifiedDates.add(addedDate.toCalendar(Locale.CHINA));
+    				LocalDate addedDate = LocalDate.parse(d);
+    				while (addedDate != null && addedDate.isBefore(LocalDate.now())) {
+    					if (addedDate.getDayOfWeek().compareTo(DayOfWeek.FRIDAY) <= 0) {
+    						Calendar c = Calendar.getInstance(Locale.CHINA);
+    						c.setTime(DateUtils.asDate(addedDate));
+    						specifiedDates.add(c);
     					}
     					addedDate = addedDate.plusDays(1);
     				}
     			}
     			else {
-    				DateTime addedDate = new DateTime(CalendarUtil.getDashDate().parse(d));
-    				if (addedDate != null && addedDate.isBeforeNow() && addedDate.getDayOfWeek() <= 5) {
-    					specifiedDates.add(addedDate.toCalendar(Locale.CHINA));
+    				LocalDate addedDate = LocalDate.parse(d);
+    				if (addedDate != null && addedDate.isBefore(LocalDate.now()) && addedDate.getDayOfWeek().compareTo(DayOfWeek.FRIDAY) <= 0) {
+    					Calendar c = Calendar.getInstance(Locale.CHINA);
+						c.setTime(DateUtils.asDate(addedDate));
+    					specifiedDates.add(c);
     				}
     			}
     		}

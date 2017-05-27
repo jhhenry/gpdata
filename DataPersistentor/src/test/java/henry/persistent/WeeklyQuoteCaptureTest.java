@@ -1,14 +1,15 @@
 package henry.persistent;
 
+import java.time.LocalDate;
 import java.util.List;
 
 import javax.persistence.EntityManager;
 
-import org.joda.time.DateTime;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import henry.commons.CalendarUtil;
+import henry.commons.DateUtils;
 import henry.html.extractor.WeeklyQuoteFromSohu;
 
 public class WeeklyQuoteCaptureTest extends AbstractWeekQuoteServiceTest
@@ -27,8 +28,8 @@ public class WeeklyQuoteCaptureTest extends AbstractWeekQuoteServiceTest
 		}
 		em.getTransaction().commit();
 		
-		DateTime dt = DateTime.now();
-		List<BasicWeeklyQuote> records = srv.getBasicWeeklyQuotes(getStockID(), CalendarUtil.getCalendar(2015, 6, 29).getTime(), dt.toDate());
+		LocalDate dt = LocalDate.now();
+		List<BasicWeeklyQuote> records = srv.getBasicWeeklyQuotes(getStockID(), CalendarUtil.getCalendar(2015, 6, 29).getTime(), DateUtils.asDate(dt));
 		Assert.assertTrue(records.size() > 90);
 	}
 

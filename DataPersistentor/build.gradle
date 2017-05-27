@@ -1,7 +1,7 @@
 apply plugin: 'java'
 apply plugin: 'eclipse'
 
-sourceCompatibility = 1.7
+sourceCompatibility = 1.8
 version = '1.0'
 jar {
     manifest {
@@ -30,7 +30,6 @@ dependencies {
     compile (group:'org.apache.logging.log4j', name:'log4j-slf4j-impl', version:'2.0.2') {transitive=false}
 	compile group: 'org.apache.logging.log4j', name: 'log4j-api', version: '2.7'
 	compile group: 'org.apache.logging.log4j', name: 'log4j-core', version: '2.7'
-	compile group: 'joda-time', name: 'joda-time', version: '2.5'
     testCompile group: 'org.testng', name: 'testng', version: '6.8.8'
 }
 
