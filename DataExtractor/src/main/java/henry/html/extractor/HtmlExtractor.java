@@ -1,16 +1,13 @@
 package henry.html.extractor;
 
 import java.io.BufferedInputStream;
-import java.io.FileNotFoundException;
 import java.io.InputStream;
-import java.io.UnsupportedEncodingException;
 
 import org.htmlparser.Node;
 import org.htmlparser.Tag;
 import org.htmlparser.Text;
 import org.htmlparser.lexer.Lexer;
 import org.htmlparser.lexer.Page;
-import org.htmlparser.util.ParserException;
 import org.htmlparser.visitors.NodeVisitor;
 
 public class HtmlExtractor
