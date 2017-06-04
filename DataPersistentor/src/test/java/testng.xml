@@ -2,7 +2,7 @@
 <suite name="PersistenceService" verbose="1" >
   <test name="relationalDB" >
     <classes>
-       <class name="henry.persistent.BasicDailyQuoteTest" />
+       <class name="henry.persistent.BasicDailyQuoteServiceTest" />
        <class name="henry.persistent.BasicWeeklyQuoteServiceTest" />
        <class name="henry.persistent.DayPriceVolTest"	/>
     </classes>

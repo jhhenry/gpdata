@@ -2,6 +2,8 @@ package henry.commons;
 
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
+import java.time.DayOfWeek;
+import java.time.LocalDate;
 import java.util.Calendar;
 import java.util.Date;
 
@@ -63,6 +65,20 @@ public class CalendarUtil
     {
         start.add(Calendar.DAY_OF_MONTH, days);
         return start.getTime();
+    }
+    
+    public static LocalDate getLatestWorkDay()
+    {
+    	LocalDate ret;
+    	LocalDate now = LocalDate.now();
+    	if (now.getDayOfWeek() == DayOfWeek.SATURDAY) {
+    		ret = now.minusDays(1);
+    	} else if (now.getDayOfWeek() == DayOfWeek.SUNDAY) {
+    		ret = now.minusDays(2);
+    	} else {
+    		ret = now;
+    	}
+    	return ret;
     }
 
     public static void main(String[] args) throws Exception

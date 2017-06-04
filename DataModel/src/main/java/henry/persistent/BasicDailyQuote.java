@@ -16,7 +16,10 @@ import javax.persistence.Transient;
 @Entity
 @NamedQueries({
 		@NamedQuery(name = "BasicDailyQuote.findByStockAndDate", query = "select o from BasicDailyQuote o where o.stock = :stock and (o.startDate between :start and :end) order by o.startDate"),
-		@NamedQuery(name = "BasicDailyQuote.findOneDayQuote", query = "select o from BasicDailyQuote o where o.startDate = :date") })
+		@NamedQuery(name = "BasicDailyQuote.findOneDayQuote", query = "select o from BasicDailyQuote o where o.startDate = :date"),
+		@NamedQuery(name = "BasicDailyQuote.deleteQuotesByStockAndDate",
+		query = "delete from BasicDailyQuote o where o.stock = :stock and o.startDate <= :end and o.startDate >= :start"),//,@NamedQuery(name = "BasicDailyQuote.findLatestQuote", query = "select o, o.startDate from BasicDailyQuote o where o.stock = :stock ORDER BY o.startDate limit 1")
+		})
 @Access(AccessType.PROPERTY)
 public class BasicDailyQuote extends AbstractCandle
 {
