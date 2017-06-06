@@ -24,7 +24,7 @@ import org.apache.logging.log4j.Logger;
 public class DailyQuoteRetrieval implements IStringVisitor
 {
     private static final Logger logger = LogManager.getLogger();
-    private static Pattern p = Pattern
+    public static Pattern DAILY_QUOTE_PATTERN = Pattern
             .compile("\\[\"(\\d{4}-\\d{2}-\\d{2})\",\"([0-9.]+)\",\"([0-9.]+)\",\"([0-9.\\-]+)\",\"([0-9.%\\-]+)\",\"([0-9.]+)\",\"([0-9.]+)\",\"([0-9.]+)\",\"([0-9.]+)\",\"([0-9.%]+)\"\\]");
 
     // private Date start;
@@ -73,13 +73,13 @@ public class DailyQuoteRetrieval implements IStringVisitor
         public Void call() throws Exception
         {
             DailyQuoteRetrieval d = new DailyQuoteRetrieval(stock);
-            d.getQuota(start, end);
+            d.persisteQuotes(start, end);
             return null;
         }
 
     }
     
-    public void getQuota(Date start, Date end)
+    public void persisteQuotes(Date start, Date end)
     {
         logger.printf(Level.TRACE, "getting stock %1$s from %2$tm %2$te,%2$tY to  %3$tm %3$te,%3$tY", stock, start, end);
         DailyQuoteFromSohu.getDaily(start, end, stock, this);
@@ -98,7 +98,7 @@ public class DailyQuoteRetrieval implements IStringVisitor
         EntityManager em = EMProvider.getEM();
         BasicDailyQuoteService svr = new BasicDailyQuoteService(em);
         em.getTransaction().begin();
-        Matcher m = p.matcher(content);
+        Matcher m = DAILY_QUOTE_PATTERN.matcher(content);
         while (m.find()) {
             int c = m.groupCount();
             if (c < 10)

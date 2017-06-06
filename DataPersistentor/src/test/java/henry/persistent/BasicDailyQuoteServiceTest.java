@@ -8,6 +8,7 @@ import javax.persistence.EntityManager;
 
 import org.testng.Assert;
 import org.testng.annotations.AfterClass;
+import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
 import dailyRun.DailyQuoteRetrieval;
@@ -49,9 +50,10 @@ public class BasicDailyQuoteServiceTest
         em.getTransaction().commit();
 	}
     
-    @Test(dependsOnMethods="test", expectedExceptions=javax.persistence.RollbackException.class)
+    @Test(expectedExceptions=javax.persistence.RollbackException.class)
     public void testPrimaryKey()
     {
+    	createRecord();
 		try {
 			createRecord();
 
@@ -63,7 +65,7 @@ public class BasicDailyQuoteServiceTest
 		}
     }
     
-    @Test(dependsOnMethods="test")
+    @Test
     public void testGetLatestQuote()
     {
     	em.getTransaction().begin();
@@ -75,7 +77,7 @@ public class BasicDailyQuoteServiceTest
         Assert.assertEquals(q.getDate(), new Date(date.getTime() + oneDay));
     }
     
-    @Test(dependsOnMethods="test")
+    @Test
     public void testDelete()
     {
     	em.getTransaction().begin();
@@ -99,6 +101,22 @@ public class BasicDailyQuoteServiceTest
         Assert.assertEquals(q2.size(), 0);
     }
     
+    @Test
+    public void testGetAllByStock()
+    {
+    	em.getTransaction().begin();
+		Date date2 = new Date(date.getTime() + oneDay * 4);
+		svr.createRecord(date2 , STOCK_ID, 10.0, 10.0, 1.0, 9.8, 8.9, 11929292, 293939238.99, 1.2);
+		Date date3 = new Date(date.getTime() + oneDay * 5);
+		svr.createRecord(date3 , STOCK_ID, 10.0, 10.0, 1.0, 9.8, 8.9, 11929292, 293939238.99, 1.2);
+        em.getTransaction().commit();
+        
+        List<BasicDailyQuote> q = svr.getAllBasicDailyQuotes(STOCK_ID);
+        Assert.assertNotNull(q);
+        Assert.assertEquals(q.size()> 0, true);
+    }
+    
+    @BeforeMethod
     @AfterClass
     public void clear()
     {

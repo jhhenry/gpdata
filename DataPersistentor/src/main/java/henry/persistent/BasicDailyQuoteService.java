@@ -62,6 +62,11 @@ public class BasicDailyQuoteService
     	em.persist(r);
     }
     
+    /**
+     * Unlike other methods, it commits the changes to the db.
+     * If you don't want it, please use the "create" method.
+     * @param qs
+     */
     public void persist(List<BasicDailyQuote> qs)
     {
     	em.getTransaction().begin();
@@ -75,6 +80,13 @@ public class BasicDailyQuoteService
     public List<BasicDailyQuote> getBasicDailyQuotes(String stock, Date start, Date end)
     {
         List<BasicDailyQuote> r = em.createNamedQuery("BasicDailyQuote.findByStockAndDate", BasicDailyQuote.class).setParameter("stock", stock).setParameter("start", start).setParameter("end", end)
+                .getResultList();
+        return r;
+    }
+    
+    public List<BasicDailyQuote> getAllBasicDailyQuotes(String stock)
+    {
+        List<BasicDailyQuote> r = em.createNamedQuery("BasicDailyQuote.findAllByStock", BasicDailyQuote.class).setParameter("stock", stock)
                 .getResultList();
         return r;
     }

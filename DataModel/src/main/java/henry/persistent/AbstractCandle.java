@@ -142,6 +142,75 @@ abstract public class AbstractCandle
 	{
 		return stock + " date: " + startDate;
 	}
+	
+	@Override
+	public int hashCode()
+	{
+		final int prime = 31;
+		int result = 1;
+		long temp;
+		temp = Double.doubleToLongBits(closing);
+		result = prime * result + (int) (temp ^ (temp >>> 32));
+		temp = Double.doubleToLongBits(gap);
+		result = prime * result + (int) (temp ^ (temp >>> 32));
+		temp = Double.doubleToLongBits(gapPercentage);
+		result = prime * result + (int) (temp ^ (temp >>> 32));
+		temp = Double.doubleToLongBits(highest);
+		result = prime * result + (int) (temp ^ (temp >>> 32));
+		temp = Double.doubleToLongBits(lowest);
+		result = prime * result + (int) (temp ^ (temp >>> 32));
+		temp = Double.doubleToLongBits(opening);
+		result = prime * result + (int) (temp ^ (temp >>> 32));
+		result = prime * result + ((startDate == null) ? 0 : startDate.hashCode());
+		result = prime * result + ((stock == null) ? 0 : stock.hashCode());
+		temp = Double.doubleToLongBits(totalDealPrice);
+		result = prime * result + (int) (temp ^ (temp >>> 32));
+		temp = Double.doubleToLongBits(turnover);
+		result = prime * result + (int) (temp ^ (temp >>> 32));
+		result = prime * result + (int) (vol ^ (vol >>> 32));
+		return result;
+	}
+
+	@Override
+	public boolean equals(Object obj)
+	{
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		AbstractCandle other = (AbstractCandle) obj;
+		if (Double.doubleToLongBits(closing) != Double.doubleToLongBits(other.closing))
+			return false;
+		if (Double.doubleToLongBits(gap) != Double.doubleToLongBits(other.gap))
+			return false;
+		if (Double.doubleToLongBits(gapPercentage) != Double.doubleToLongBits(other.gapPercentage))
+			return false;
+		if (Double.doubleToLongBits(highest) != Double.doubleToLongBits(other.highest))
+			return false;
+		if (Double.doubleToLongBits(lowest) != Double.doubleToLongBits(other.lowest))
+			return false;
+		if (Double.doubleToLongBits(opening) != Double.doubleToLongBits(other.opening))
+			return false;
+		if (startDate == null) {
+			if (other.startDate != null)
+				return false;
+		} else if (!startDate.equals(other.startDate))
+			return false;
+		if (stock == null) {
+			if (other.stock != null)
+				return false;
+		} else if (!stock.equals(other.stock))
+			return false;
+		if (Double.doubleToLongBits(totalDealPrice) != Double.doubleToLongBits(other.totalDealPrice))
+			return false;
+		if (Double.doubleToLongBits(turnover) != Double.doubleToLongBits(other.turnover))
+			return false;
+		if (vol != other.vol)
+			return false;
+		return true;
+	}
 
 
 }
